@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLUE ZENITH - Online Banking</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <img src="BLUE_BANK-removebg-preview.png" alt="Logo" width="120">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <div class="logo">
+                <img src="BLUE_BANK-removebg-preview.png" alt="Logo">
+                <h1>BLUE ZENITH</h1>
+            </div>
+            <nav id="nav">
+                <ul id="navList">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="auth-buttons">
+                    <button class="btn btn-outline" id="loginBtn">Login</button>
+                    <button class="btn btn-primary" id="signupBtn">Sign Up</button>
+                </div>
+            </nav>
+            <div class="mobile-menu-toggle" id="mobileMenuToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Home Page (for non-logged-in users) -->
+    <div id="homePage">
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <h2>Banking Made Smarter</h2>
+                <p>Experience the future of banking with secure, fast, and reliable financial services.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" id="getStartedBtn">Get Started</button>
+                    <button class="btn btn-outline" id="learnMoreBtn">Learn More</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services" id="services">
+            <div class="container">
+                <h2>Our Services</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <i class="fas fa-exchange-alt"></i>
+                        <h3>Money Transfer</h3>
+                        <p>Send money instantly to anyone, anywhere in the world with our secure transfer system.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>Mobile Banking</h3>
+                        <p>Access your account 24/7 from your mobile device with our user-friendly app.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-credit-card"></i>
+                        <h3>Digital Cards</h3>
+                        <p>Get instant virtual cards for online shopping and secure transactions.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Investment</h3>
+                        <p>Grow your wealth with our investment options and financial planning tools.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Security</h3>
+                        <p>Bank-level security with advanced encryption and fraud protection.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-headset"></i>
+                        <h3>24/7 Support</h3>
+                        <p>Round-the-clock customer support to help you with all your banking needs.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about" id="about">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2>About BLUE ZENITH</h2>
+                        <p>We are a leading digital bank committed to providing innovative financial solutions that make banking simple, secure, and accessible to everyone.</p>
+                        <p>With cutting-edge technology and a customer-first approach, we're revolutionizing the way people manage their finances.</p>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Secure and encrypted transactions</li>
+                            <li><i class="fas fa-check"></i> No hidden fees</li>
+                            <li><i class="fas fa-check"></i> 24/7 customer support</li>
+                            <li><i class="fas fa-check"></i> Easy account management</li>
+                        </ul>
+                    </div>
+                    <div class="about-image">
+                        <img src="online_banking.jpg" alt="Online Banking">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact" id="contact">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>support@bluezenith.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Address</h4>
+                                <p>123 Banking Street, Financial District</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <form>
+                            <input type="text" placeholder="Your Name" required>
+                            <input type="email" placeholder="Your Email" required>
+                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Dashboard (for logged-in users) -->
+    <div id="dashboard" style="display: none;">
+        <!-- Dashboard Header -->
+        <div class="dashboard-header">
+            <div class="container">
+                <div class="user-welcome">
+                    <h2>Welcome back, <span id="userName">User</span>!</h2>
+                    <p>Here's your account overview</p>
+                </div>
+                <div class="dashboard-nav">
+                    <button class="btn btn-outline" id="logoutBtn">
+                        <i class="fas fa-sign-out-alt"></i> Logout
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="quick-actions">
+            <div class="container">
+                <h3>Quick Actions</h3>
+                <div class="actions-grid">
+                    <div class="action-btn" onclick="openTransaction('Transfer')">
+                        <i class="fas fa-exchange-alt"></i>
+                        <span>Transfer</span>
+                    </div>
+                    <div class="action-btn" onclick="openTransaction('Deposit')">
+                        <i class="fas fa-arrow-down"></i>
+                        <span>Deposit</span>
+                    </div>
+                    <div class="action-btn" onclick="openTransaction('Withdraw')">
+                        <i class="fas fa-arrow-up"></i>
+                        <span>Withdraw</span>
+                    </div>
+                    <div class="action-btn">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>Airtime</span>
+                    </div>
+                    <div class="action-btn">
+                        <i class="fas fa-wifi"></i>
+                        <span>Data</span>
+                    </div>
+                    <div class="action-btn">
+                        <i class="fas fa-futbol"></i>
+                        <span>Sports Bet</span>
+                    </div>
+                    <div class="action-btn">
+                        <i class="fas fa-file-invoice"></i>
+                        <span>Bills</span>
+                    </div>
+                    <div class="action-btn">
+                        <i class="fas fa-bolt"></i>
+                        <span>Recharge</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Account Balance -->
+        <div class="balance-section">
+            <div class="container">
+                <div class="balance-card">
+                    <h3>Account Balance</h3>
+                    <div class="balance-amount">₦<span id="balance">100,000.00</span></div>
+                    <div class="balance-actions">
+                        <button class="btn btn-sm" onclick="toggleBalance()">
+                            <i class="fas fa-eye" id="balanceToggleIcon"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recent Transactions -->
+        <div class="transactions-section">
+            <div class="container">
+                <div class="transactions">
+                    <h3>Recent Transactions</h3>
+                    <div class="table-responsive">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Type</th>
+                                    <th>Amount</th>
+                                    <th>Balance</th>
+                                </tr>
+                            </thead>
+                            <tbody id="transactionsBody">
+                                <!-- Transactions will be populated here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Login to Your Account</h3>
+                <span class="close" onclick="closeModal('loginModal')">&times;</span>
+            </div>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail">Email</label>
+                    <input type="email" id="loginEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">Login</button>
+            </form>
+            <p class="modal-footer">Don't have an account? <a href="#" onclick="switchToSignup()">Sign up</a></p>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div class="modal" id="signupModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Create Your Account</h3>
+                <span class="close" onclick="closeModal('signupModal')">&times;</span>
+            </div>
+            <form id="signupForm">
+                <div class="form-group">
+                    <label for="signupName">Full Name</label>
+                    <input type="text" id="signupName" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupEmail">Email</label>
+                    <input type="email" id="signupEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupPassword">Password</label>
+                    <input type="password" id="signupPassword" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">Sign Up</button>
+            </form>
+            <p class="modal-footer">Already have an account? <a href="#" onclick="switchToLogin()">Login</a></p>
+        </div>
+    </div>
+
+    <!-- Transaction Modal -->
+    <div class="modal" id="transactionModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">Transaction</h3>
+                <span class="close" onclick="closeModal('transactionModal')">&times;</span>
+            </div>
+            <form id="transactionForm">
+                <div class="form-group">
+                    <label for="amount">Amount (₦)</label>
+                    <input type="number" id="amount" placeholder="Enter amount" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <img src="BLUE_BANK-removebg-preview.png" alt="Logo">
+                        <h3>BLUE ZENITH</h3>
+                    </div>
+                    <p>Your trusted partner in digital banking solutions.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Money Transfer</a></li>
+                        <li><a href="#">Mobile Banking</a></li>
+                        <li><a href="#">Digital Cards</a></li>
+                        <li><a href="#">Investment</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=61579639550379"><i class="fab fa-facebook"></i></a>
+                        <a href="https://x.com/GstarNkem1?t=VHjIgnddnU4ggacnnOf-Lw&s=09"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 BLUE ZENITH. All rights reserved.©CODER GSTAR™ </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
